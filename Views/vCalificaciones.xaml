@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TariasS2.Views.vCalificaciones"
+             Title="Calificaciones UISRAEL"
+             BackgroundColor="#D6F0FF">
+    <ScrollView>
+
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+        <!-- Picker Estudiantes -->
+        <Label Text="Calificaciones Uisrael" FontAttributes="Bold" TextColor="DarkBlue" FontSize="30" HorizontalOptions="Center" />
+        <Label Text="Nombre Estudiante" FontAttributes="Bold" TextColor="Blue" FontSize="24"/>
+        <Picker x:Name="pickerEstudiantes" Title="Seleccione estudiante">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Tanya Arias</x:String>
+                    <x:String>Juan Martínez</x:String>
+                    <x:String>Lilia Fortune</x:String>
+                    <x:String>Lulu Shen</x:String>
+                    <x:String>Alexei Novak</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+            <!-- Parcial 1 -->
+            <Label Text="Parcial 1" FontSize="24" TextColor="Purple" HorizontalOptions="Center"/>
+            <Label x:Name="parcial1" Text="0" TextColor="Purple" HorizontalOptions="Center"/>
+            <Label Text="Nota Seguimiento P1" TextColor="DarkGreen"/>
+            <Entry x:Name="seguimiento1" Keyboard="Numeric" MaxLength="4" Placeholder="0-10"/>
+            <Label Text="Examen P1" TextColor="DarkRed"/>
+            <Entry x:Name="examen1" Keyboard="Text" MaxLength="4" Placeholder="0-10"/>
+
+            <!-- Parcial 2 -->
+            <Label Text="Parcial 2" FontSize="24" TextColor="Purple" HorizontalOptions="Center"/>
+            <Label x:Name="parcial2" Text="0" TextColor="Purple" HorizontalOptions="Center"/>
+            <Label Text="Nota Seguimiento P2" TextColor="DarkGreen"/>
+            <Entry x:Name="seguimiento2" Keyboard="Text" MaxLength="4" Placeholder="0-10"/>
+            <Label Text="Examen P2" TextColor="DarkRed"/>
+            <Entry x:Name="examen2" Keyboard="Text" MaxLength="4" Placeholder="0-10"/>
+
+
+
+            <!-- Fecha -->
+        <Label Text="Fecha" FontAttributes="Bold"/>
+        <DatePicker x:Name="fechaPicker" Format="dd/MM/yyyy"/>
+
+        <!-- Botón Calcular -->
+        <Button Text="Calcular Nota Final" BackgroundColor="Blue" TextColor="White" Clicked="CalcularNotaFinal_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
