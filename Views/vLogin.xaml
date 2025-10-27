@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TariasS2.Views.vLogin"
+             Title="vLogin"
+             BackgroundColor="#F0FAFF">
+    <VerticalStackLayout Padding="30" Spacing="15" VerticalOptions="Center">
+        <Label Text="Acceso al Sistema"
+               FontSize="28"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+        <Entry x:Name="txtUsuario"
+               Placeholder="Usuario"
+               Keyboard="Text" />
+
+        <Entry x:Name="txtContrasena"
+               Placeholder="Contraseña"
+               IsPassword="True"
+               Keyboard="Text"/>
+
+        <Button x:Name="btnIniciarSesion"
+                Text="Ingresar"
+                BackgroundColor="DarkBlue"
+                TextColor="White"
+                Clicked="btnIngresar_Clicked"/>
+
+        <Button x:Name="btnRegistrarse"
+                Text="Registrarse"
+                BackgroundColor="Gray"
+                TextColor="White"
+                Clicked="btnRegistrarse_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
